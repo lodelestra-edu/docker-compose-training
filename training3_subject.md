@@ -17,8 +17,7 @@ To make containers link your will need to use named containers and alias (cf [sl
 @. Create a phpmyadmin, from the unofficial container `corbinu/docker-phpmyadmin`, name it "phpmyadmin' and link it to "database" with the alias "mysql".   
 You can found pretty helpful documentation in the corbinu docker-phpmyadmin docker hub page.   
 @. Use `docker exec` to open an interactive shell into the phpmyadmin running container. Display the file /etc/hosts. What is the ip address of your mysql container?
-@. Log into 
-
+@. Login to the phpmyadmin page   
 
 
 ##B/ All in one file.
