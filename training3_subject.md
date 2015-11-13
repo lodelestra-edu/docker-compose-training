@@ -14,7 +14,7 @@ Docker container can use network. In the previous training you have experiment t
 To make containers link your will need to use named containers and alias (cf [slides](http://edu.delestra.com/docker-slides/#/9) and [docker documentation](https://docs.docker.com/userguide/dockerlinks/))
 
 @. Create a mysql container, from the official mysql repository, and name it "database".
-@. Create a phpmyadmin, from the unofficial container `corbinu/docker-phpmyadmin`, name it "phpmyadmin' and link it to "database" with the alias "mysql".   
+@. Create a phpmyadmin, from the unofficial image `corbinu/docker-phpmyadmin`, name it "phpmyadmin' and link it to "database" with the alias "mysql".   
 You can found pretty helpful documentation in the corbinu docker-phpmyadmin docker hub page.   
 @. Use `docker exec` to open an interactive shell into the phpmyadmin running container. Display the file /etc/hosts. What is the ip address of your mysql container?
 @. Login to the phpmyadmin page   
@@ -24,6 +24,13 @@ You can found pretty helpful documentation in the corbinu docker-phpmyadmin dock
 You can run and connect multiple containers manually in command line, but it's not very effective and not scalable. Imagine you doing that with a 5, 10 or 15 containers application.   
 
 Docker provide a tool for that: [docker-compose](https://docs.docker.com/compose/)   
+
+Check docker-compose is present in your system with "`docker-compose --version`". If not you can install it with:   
+```
+curl -L https://github.com/docker/compose/releases/download/1.5.1/docker-compose-`uname -s`-`uname -m` > \
+/usr/local/bin/docker-compose ;\
+chmod +x /usr/local/bin/docker-compose
+```
 
 ###B.1
 @. Write a Dockerfile to build an image "pinger" from ubuntu with the entrypoint "ping target"
