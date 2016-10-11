@@ -14,8 +14,8 @@ Docker container can use network. In the previous training you have experiment t
 To make containers link your will need to use named containers and alias (cf [slides](http://edu.delestra.com/docker-slides/#/9) and [docker documentation](https://docs.docker.com/userguide/dockerlinks/))
 
 @. Create a mysql container, from the official mysql repository, and name it "database".
-@. Create a phpmyadmin container, from the official phpmyadmin image, name it "phpmyadmin' and link it to "database" with the alias "mysql".   
-You can found pretty helpful documentation in the corbinu docker-phpmyadmin docker hub page.   
+@. Create a phpmyadmin container, from the official phpmyadmin image, name it "phpmyadmin' and link it to "database" with the alias "db".   
+You can found pretty helpful documentation in the phpmyadmin docker hub page.   
 @. Use `docker exec` to open an interactive shell into the phpmyadmin running container. Display the file /etc/hosts. What is the ip address of your mysql container?
 @. Login to the phpmyadmin page   
 
