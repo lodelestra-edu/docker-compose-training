@@ -1,9 +1,10 @@
 
 During the last training course you used simple docker command and Dockerfiles. This week you will use multiple containers connected together with network links. You will also use docker-compose to create multiple containers application.
 
-## A/ Use link
+## A/ Network
+### A.1/ Use link
 Docker container can use network. In the previous training you have experiment the port mapping. Now you will use networking between containers.
-To make containers link your will need to use named containers and alias (cf [slides](http://edu.delestra.com/docker-slides/#/9) and [docker documentation](https://docs.docker.com/userguide/dockerlinks/))
+To make containers link your will need to use named containers and alias (cf [slides](http://edu.delestra.com/docker-slides/#/9) and [docker documentation](https://docs.docker.com/network/links/))
 
 1. Create a mysql container, from the official mysql repository, and name it "database".
 2. Create a phpmyadmin container, from the official phpmyadmin image, name it "phpmyadmin' and link it to "database" with the alias "db".   
@@ -11,6 +12,8 @@ To make containers link your will need to use named containers and alias (cf [sl
 3. Use `docker exec` to open an interactive shell into the phpmyadmin running container. Display the file /etc/hosts. What is the ip address of your mysql container?
 4. Login to the phpmyadmin page   
 
+### A.2/ Use user-bridge network
+Same as part A/ with user-bridge network instead of link.
 
 ## B/ All in one file.
 You can run and connect multiple containers manually in command line, but it's not very effective and not scalable. Imagine you doing that with a 5, 10 or 15 containers application.   
