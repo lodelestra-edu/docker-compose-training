@@ -6,7 +6,7 @@ During the last training course you used simple docker command and Dockerfiles. 
 Docker container can use network. In the previous training you have experiment the port mapping. Now you will use networking between containers.
 To make containers link your will need to use named containers and alias (cf [slides](http://edu.delestra.com/docker-slides/#/9) and [docker documentation](https://docs.docker.com/network/links/))
 
-1. Create a mysql container, from the official mysql repository, and name it "database".
+1. Create a mysql container, from the official mysql repository, version 5, and name it "database".
 2. Create a phpmyadmin container, from the official phpmyadmin image, name it "phpmyadmin' and link it to "database" with the alias "db".   
    You can found pretty helpful documentation in the phpmyadmin docker hub page.   
 3. Use `docker exec` to open an interactive shell into the phpmyadmin running container. Display the file /etc/hosts. What is the ip address of your mysql container?
